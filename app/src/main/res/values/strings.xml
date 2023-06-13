@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyTodo</string>
+    <string name="searchbar_hint">搜索代办</string>
+</resources>

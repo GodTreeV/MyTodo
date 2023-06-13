@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyTodo" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">#eee8f4</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="dialogCornerRadius">@dimen/dp_28</item>
+    </style>
+    <style name="Theme.MyTodo" parent="Base.Theme.MyTodo" />
+
+    <style name="CollapsingToolbarTitle.Collapsed" parent="Base.Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/n1_900</item>
+    </style>
+
+    <style name="CollapsingToolbarTitle.Expanded" parent="CollapsingToolbarTitle.Collapsed">
+        <item name="android:textSize">32sp</item>
+        <item name="android:lineHeight">@dimen/dp_44</item>
+        <item name="android:textColor">@color/n1_900</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

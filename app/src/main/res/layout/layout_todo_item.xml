@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="todo"
+            type="com.aceyan.mytodo.checklist.Todo" />
+
+        <import type="com.aceyan.mytodo.utils.TimeUtil"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginHorizontal="@dimen/dp_12"
+        android:layout_marginVertical="@dimen/dp_5"
+        android:background="@drawable/shape_todo_item"
+        android:paddingVertical="@dimen/dp_12"
+        android:paddingHorizontal="@dimen/dp_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.aceyan.mytodo.view.SmoothCheckBox
+            android:id="@+id/check_box"
+            android:layout_width="@dimen/dp_24"
+            app:color_checked="#F06292"
+            android:layout_height="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/content_view"
+            android:layout_width="0dp"
+            android:textSize="@dimen/sp_16"
+            android:text="@{todo.content}"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_12"
+            app:layout_constraintEnd_toStartOf="@+id/info_view"
+            app:layout_constraintStart_toEndOf="@+id/check_box"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/updateTimeView"
+            android:textSize="@dimen/sp_12"
+            android:textColor="#4B777777"
+            android:text="@{todo.updateTimeFormat}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintStart_toEndOf="@+id/check_box"
+            app:layout_constraintTop_toBottomOf="@+id/content_view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/timeView"
+            android:textColor="#FF80AB"
+            android:textSize="@dimen/sp_14"
+            android:text="@{todo.reminderTimeFormat}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_12"
+            android:layout_marginTop="@dimen/dp_5"
+            app:layout_constraintStart_toEndOf="@+id/check_box"
+            app:layout_constraintTop_toBottomOf="@+id/updateTimeView" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/info_view"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="#D0B3FF"
+            app:srcCompat="@drawable/ic_extras" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

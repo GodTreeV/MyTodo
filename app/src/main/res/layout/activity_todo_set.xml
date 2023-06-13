@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eee8f4"
+        android:orientation="vertical"
+        tools:context=".ui.TodoSetActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="新建代办" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/contentSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/shape_edit_text"
+                    android:drawableStart="@drawable/ic_msg"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTint="#7986CB"
+                    android:gravity="center_vertical"
+                    android:hint="输入内容"
+                    android:paddingHorizontal="@dimen/dp_12"
+                    android:paddingVertical="@dimen/dp_16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/timeSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_12"
+                    android:layout_marginVertical="@dimen/dp_16"
+                    android:background="@drawable/shape_edit_text"
+                    android:drawableStart="@drawable/ic_alarm"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableTint="#7986CB"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/dp_12"
+                    android:paddingVertical="@dimen/dp_16"
+                    android:text="设置时间" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/picSet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_12"
+                        android:layout_marginEnd="@dimen/dp_6"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_edit_text"
+                        android:backgroundTint="#D1C4E9"
+                        android:drawableTop="@drawable/ic_photo"
+                        android:drawableTint="#7986CB"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dp_10"
+                        android:text="图片"
+                        android:textColor="@color/n1_700" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/audioSet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_edit_text"
+                        android:backgroundTint="#D1C4E9"
+                        android:drawableTop="@drawable/ic_audio"
+                        android:drawableTint="#7986CB"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/dp_10"
+                        android:text="录音"
+                        android:textColor="@color/n1_700" />
+
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
